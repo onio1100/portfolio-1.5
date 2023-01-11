@@ -123,7 +123,6 @@ nav{
 .about-wraper{
     width: 60%;
     height: auto;
-    /* border: 3px solid var(--black); */
     background-color: var(--white);
     display: flex;
     flex-direction: column;
@@ -137,7 +136,6 @@ nav{
     font-weight: 800;
 }
 .about-text{
-    /* line-height: 3.5rem; */
     font-size: 1.3rem;
     font-weight: 800;
     color: var(--black);
@@ -147,7 +145,7 @@ nav{
 /* work section */
 
 .work{
-    height: 80vh;
+    height: auto;
     width: 100%;
     position: relative;
     display: flex;
@@ -156,7 +154,7 @@ nav{
 }
 .work-title-wraper{
     padding: 1rem;
-    height: 15%;
+    height: 155px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -169,12 +167,15 @@ nav{
     padding-right: 1rem;
 }
 .projects-conteiner{
-    /* padding-top: 2rem; */
-    height: 85%;
+    /* height: 654.5px; */
     width: 100%;
-    display: flex;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(1, 600px);
+    grid-template-columns: repeat(auto-fit, minmax( 365px, 380px));
+    grid-auto-rows: 600px;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
 }
 
 /* work section project card */
@@ -196,7 +197,6 @@ nav{
 }
 .project-img{
     width: 100%;
-    /* border-radius: 1rem; */
     object-fit: contain;
 }
 .project-text-wraper{
@@ -289,7 +289,7 @@ nav{
 
 footer{
     width: 100%;
-    height: 50vh;
+    height: 485px;
     display: flex;
     background-color: var(--white);
 }
@@ -332,6 +332,7 @@ footer{
     justify-content: flex-start;
     align-items: center;
     text-decoration: none;
+    padding-bottom: 1rem;
 }
 .footer-link-wraper:hover .footer-link-background::before{
     width: 150px;
@@ -379,4 +380,23 @@ footer{
     text-decoration: none;
     transition: 0.2s;
     z-index: 90;
+}
+
+@media  screen and (max-width:1850px) {
+    .work{
+        height: auto;
+        /* padding-bottom: 2rem; */
+    }
+    .work-title-wraper{
+        height: 155px;
+    }
+    .projects-conteiner {
+        height: auto;
+        display: grid;
+        grid-template-rows: repeat(1, 600px);
+        grid-template-columns: repeat(auto-fit, minmax( 365px, 400px));
+        grid-auto-rows: 600px;
+        justify-content: center;
+        align-items: center;
+    }
 }
